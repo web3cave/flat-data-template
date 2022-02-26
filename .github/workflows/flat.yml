@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - .github/workflows/flat.yml
+      - ./postprocess.ts
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -21,3 +22,4 @@ jobs:
         with:
           http_url: https://gsx2json.com/api?id=1JPcqaDEBkIIKUgJXG8GOpszjK9fl7JFbegVfYYggtPI&sheet=dapps
           downloaded_filename: data.json
+          postprocess: ./postprocess.ts
